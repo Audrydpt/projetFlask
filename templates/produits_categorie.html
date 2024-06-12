@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Produits de la catégorie : {{ category.nom_categ }}</h2>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
+                {% for eq in equipements %}
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img loading="lazy" src="/static/images/{{ eq.image }}" alt="image" class="card-img-top"/>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <span class="titre"> {{ eq.nome }} </span><br>
+                                {{ eq.tarife }} €/j <br>
+                                {{ eq.descriptione }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

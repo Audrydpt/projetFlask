@@ -1,0 +1,14 @@
+.card-fixed-height {
+    height: 500px; /* Ajustez cette valeur en fonction de vos besoins */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+}
+.card-img-top {
+    max-height: 500px; /* Ajustez cette valeur selon vos besoins */
+    object-fit: cover; /* Assure que l'image couvre la zone définie sans perdre ses proportions */
+    width: 80%; /* Assure que l'image couvre toute la largeur de la carte */
+}
